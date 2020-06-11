@@ -1,4 +1,5 @@
 library(shiny)
+library(shinycssloaders)
 library(jsonlite)
 library(tidyverse)
 library(DT)
@@ -39,22 +40,22 @@ ui <- fluidPage(
         # tab for a barplot of number of brands making the vehicle types
         tabPanel(
           "barplot for brands of type",
-          plotOutput("Barplt")
+          withSpinner(plotOutput("Barplt"))
         ),
 
         # tab for list of models for selected type and brand
         tabPanel(
           "models for selected type and brand",
-          dataTableOutput("Model")
+          withSpinner(dataTableOutput("Model"))
         ),
 
         tabPanel(
           "manufacturer info for selected brand",
-          dataTableOutput("Manufacturer")
+          withSpinner(dataTableOutput("Manufacturer"))
         ),
         tabPanel(
           "barplot for models over years",
-          plotOutput("Barplt2")
+          withSpinner(plotOutput("Barplt2"))
         )
       )
     )
