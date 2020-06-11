@@ -1,4 +1,4 @@
-# STA141BFinalProject
+# STA141B Final Project
 
  This project gets data from The NHTSA Product Information Catalog Vehicle Listing (vPIC) Application Programming Interface (API) . 
 
